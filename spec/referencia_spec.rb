@@ -37,6 +37,19 @@ describe Referencia do
         expect(@lista.last).to eq(@nodo2)
         expect(@nodo2.value).to eq(@referencia2)
       end
+      
+      it "Se debe poder eliminar un elemento por el principio de la lista" do
+        @lista.add_first_empty(@nodo1)
+        @lista.add_first(@nodo2)
+        @lista.add_first(@nodo3)
+        @lista.add_first(@nodo4)
+        @lista.add_first(@nodo5)
+        @lista.del_first
+        expect(@lista.first).to eq(@nodo4)
+        expect(@nodo2.value).to eq(@referencia2)
+      end
+      
+      
     
     
     
