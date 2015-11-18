@@ -49,6 +49,17 @@ describe Referencia do
         expect(@nodo2.value).to eq(@referencia2)
       end
       
+      it "Se debe poder eliminar un elemento por el final de la lista" do
+        @lista.add_first_empty(@nodo1)
+        @lista.add_last(@nodo2)
+        @lista.add_last(@nodo3)
+        @lista.add_last(@nodo4)
+        @lista.add_last(@nodo5)
+        @lista.del_last
+        expect(@lista.last).to eq(@nodo4)
+        expect(@nodo2.value).to eq(@referencia2)
+      end
+      
       
     
     
