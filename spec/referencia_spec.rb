@@ -20,6 +20,10 @@ describe Referencia do
     
     
     context "Node" do
+        it "Debe existir un Nodo de la lista con su valor" do
+            expect(@nodo1.value).to eq(@referencia1)
+        end
+
 
     end
     
