@@ -15,50 +15,21 @@ describe Referencia do
         @nodo4 = Nodo.new(@referencia4)
         @nodo5 = Nodo.new(@referencia5)
         
-        @lista = Lista.new(0)
+        @lista = ListaDoble.new()
     end  
     
+    
     context "Node" do
-        it "Debe existir un Nodo de la lista con sus datos y su siguiente" do
-            expect(@nodo1.value).to eq(@referencia1)
-            expect(@nodo1.next).to eq(nil)
-        end
+
     end
     
-    context "List" do
-        it "Se extrae el primer elemento de la lista" do
-            @lista.push(@nodo5)
-            @lista.push(@nodo4)
-            @lista.ext
-            expect(@lista.first).to eq(@nodo5)
-        end
-        
-        it "Se puede insertar un elemento" do
-            @lista.push(@nodo4)
-            expect(@lista.first).to eq(@nodo4)
-        end
-        
-        it "Se pueden insertar varios elementos" do
-            @lista.push(@nodo5)
-            @lista.push(@nodo4)
-            @lista.push(@nodo3)
-            @lista.push(@nodo2)
-            @lista.push(@nodo1)
-            expect(@lista.first).to eq(@nodo1)
-            @lista.ext
-            expect(@lista.first).to eq(@nodo2)
-            @lista.ext
-            expect(@lista.first).to eq(@nodo3)
-            @lista.ext
-            expect(@lista.first).to eq(@nodo4)
-            @lista.ext
-            expect(@lista.first).to eq(@nodo5)
-        end
-        
-        it "Debe existir una lista con su cabeza" do
-            @lista.push(@nodo1)
-            expect(@lista.first).to eq(@nodo1)
-        end
+    context "ListaDoble" do
+      it "Se debe poder insertar un elemento en la lista por el principio" do
+        @lista.add_first_empty(@nodo1)
+        @lista.add_first(@nodo2)
+        expect(@lista.first).to eq(@nodo2)
+        expect(@nodo2.value).to eq(@referencia2)
+      end
     end
     
     
