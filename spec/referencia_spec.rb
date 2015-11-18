@@ -23,7 +23,10 @@ describe Referencia do
         it "Debe existir un Nodo de la lista con su valor" do
             expect(@nodo1.value).to eq(@referencia1)
         end
-
+        
+        it "Existe un nodo con su siguiente" do
+            expect(@nodo1.next_node).to eq(nil)
+        end
 
     end
     
