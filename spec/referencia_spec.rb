@@ -35,7 +35,15 @@ describe Referencia do
     end
     
     context "ListaDoble" do
-      it "Se debe poder insertar un elemento en la lista por el principio" do
+        
+      it "Se debe poder insertar un elemento en la lista" do
+        @lista.add_first_empty(@nodo1)
+        expect(@lista.first).to eq(@nodo1)
+        expect(@nodo1.value).to eq(@referencia1)
+      end
+      
+      
+      it "Se debe poder insertar varios elementos en la lista por el principio" do
         @lista.add_first_empty(@nodo1)
         @lista.add_first(@nodo2)
         expect(@lista.first).to eq(@nodo2)
