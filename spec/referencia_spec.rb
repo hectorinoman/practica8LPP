@@ -79,9 +79,14 @@ describe Referencia do
         expect(@nodo2.value).to eq(@referencia2)
       end
       
+    end
+          
+      context "Herencia" do
+      it "Comprobar es una revista es una referencia" do
+        expect(@referencia5.is_a?Bibliografia).to eq(true)
+      end
       
-    
-    
+      
     
     
     
