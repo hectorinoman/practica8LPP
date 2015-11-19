@@ -50,14 +50,14 @@ describe Referencia do
         expect(@nodo2.value).to eq(@referencia2)
       end
       
-      it "Se debe poder insertar un elemento por el final de la lista" do
+      it "Se debe poder insertar varios elementos por el final de la lista" do
         @lista.add_first_empty(@nodo1)
         @lista.add_last(@nodo2)
         expect(@lista.last).to eq(@nodo2)
         expect(@nodo2.value).to eq(@referencia2)
       end
       
-      it "Se debe poder eliminar un elemento por el principio de la lista" do
+      it "Se debe poder eliminar varios elementos por el principio de la lista" do
         @lista.add_first_empty(@nodo1)
         @lista.add_first(@nodo2)
         @lista.add_first(@nodo3)
@@ -68,7 +68,7 @@ describe Referencia do
         expect(@nodo2.value).to eq(@referencia2)
       end
       
-      it "Se debe poder eliminar un elemento por el final de la lista" do
+      it "Se debe poder eliminar varios elementos por el final de la lista" do
         @lista.add_first_empty(@nodo1)
         @lista.add_last(@nodo2)
         @lista.add_last(@nodo3)
