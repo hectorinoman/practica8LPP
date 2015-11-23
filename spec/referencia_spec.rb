@@ -90,6 +90,10 @@ describe Referencia do
         expect(@lista.is_a?Object).to eq(true)
       end
       
+      it "herencia en un objeto referencia" do
+        expect(@text_book.is_a?Book).to eq(true)
+      end
+      
       
     
     
